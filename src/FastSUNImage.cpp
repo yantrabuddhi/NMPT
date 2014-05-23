@@ -92,7 +92,7 @@ void reInitializeSaliency(int doNotUseMe=0, void* orMe=NULL) {
 	int first_rad = (1<<rad0)/2; // [0 1 2 4 8 16 ...]
 	
 	//This is generally not thread-safe programming, but it seems to work.
-	salTracker = FastSalience::FastSalience(ntemporal, nspatial, first_tau, first_rad);
+	salTracker = FastSalience(ntemporal, nspatial, first_tau, first_rad);
 	
 	cout << "Created new FastSaliency object with the following parameters." << endl;
 	cout << "  Width:                                   " << saliencyMapWidth << endl; 

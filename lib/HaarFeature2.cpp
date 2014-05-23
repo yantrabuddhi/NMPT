@@ -30,8 +30,8 @@ void HaarFeature2::init(cv::Size expectedPatchSize, int numBoxes) {
 	double maxVals[1][10] = {{patchSize.width, patchSize.height, patchSize.width-1, patchSize.height-1, 6, 2, 3, 3, 2, 2}}; 
 	
 	parameters.create(1, 10, CV_64F); 
-	minParamVals = Mat::Mat(1, 10, CV_64F, minVals).clone(); 
-	maxParamVals = Mat::Mat(1, 10, CV_64F, maxVals).clone(); 
+	minParamVals = Mat(1, 10, CV_64F, minVals).clone(); 
+	maxParamVals = Mat(1, 10, CV_64F, maxVals).clone(); 
 	setRandomParameterValues(); 
 }
 
