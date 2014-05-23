@@ -93,7 +93,7 @@ int main (int argc, char * const argv[])
 	}
 	
 	//Get input from the included video
-	CvCapture* movie = cvCreateFileCapture("data/HDMovieClip.avi"); 
+	CvCapture* movie = cvCaptureFromCAM(0);//cvCreateFileCapture("data/HDMovieClip.avi"); 
 	
     if (! movie) {
 		cout<< "Couldn't find movie: data/HDMovieClip.avi - Try running from the NMPT directory." << endl << endl
